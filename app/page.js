@@ -18,7 +18,9 @@ const HomePage = () => {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: 'url("/cargo.jpg")' }}
+          style={{
+            backgroundImage: 'url("/industrial-port-container-yard.jpg")',
+          }}
         />
 
         {/* Dark Overlay */}
@@ -288,7 +290,7 @@ const HomePage = () => {
           </div>
           <div className="flex justify-end align-top mb-40 -mt-20 ">
             <Image
-              src="/containers.jpg"
+              src="/container3.jpg"
               width={1000}
               height={500}
               objectFit="cover"

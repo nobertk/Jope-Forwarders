@@ -1,101 +1,125 @@
+import React from "react";
 import Link from "next/link";
+import { ArrowRight, Mail } from "@mui/icons-material";
 
 export default function Footer() {
   return (
-    <footer className=" bg-black text-white">
-      {/* Footer Top */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {/* Subscribe Section */}
-        <div className=" bg-gray-600 p-20">
-          <h3 className="text-lg font-semibold uppercase mb-4">
-            Subscribe to Our Newsletter
-          </h3>
-          <p className="mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam
-            nonummy nibh euismod.
-          </p>
-          <form className="space-y-4">
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full bg-transparent border-b border-gray-600 text-white placeholder-gray-400 py-2 focus:outline-none"
-            />
-            <button
-              type="submit"
-              className="bg-blue-700 text-white font-medium px-9 py-4 rounded-full hover:bg-blue-800 transition"
-            >
-              Subscribe →
-            </button>
-          </form>
-        </div>
-
-        {/* Links Section */}
-        <div className="grid grid-cols-2 gap-8 p-20">
-          {/* Column 1 */}
-          <div>
-            <h4 className="uppercase font-semibold mb-4">Links /</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/">Home</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/services">Services</Link>
-              </li>
-              <li>
-                <Link href="/blog">Blog</Link>
-              </li>
-            </ul>
+    <footer className="bg-black text-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
+          {/* Subscribe Section with grey background */}
+          <div className="md:col-span-4 bg-gray-800/50 p-12 lg:p-16">
+            <div className="max-w-md">
+              <div className="flex items-center gap-3 mb-6">
+                <Mail className="w-5 h-5 text-blue-400" />
+                <h3 className="text-lg font-semibold tracking-wide">
+                  Stay Updated
+                </h3>
+              </div>
+              <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                Subscribe to our newsletter to receive the latest updates and
+                exclusive offers. No spam, guaranteed.
+              </p>
+              <form className="space-y-6">
+                <div className="relative">
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    className="w-full bg-gray-900/50 border-b border-gray-700 text-white placeholder-gray-500 py-3 px-4 focus:outline-none focus:border-blue-400 transition-colors rounded-lg"
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="group flex items-center gap-2 bg-blue-600 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  Subscribe
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </form>
+            </div>
           </div>
-          {/* Column 2 */}
-          <div>
-            <h4 className="uppercase font-semibold mb-4">Links /</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/freight">Freight</Link>
-              </li>
-              <li>
-                <Link href="/cargo">Cargo</Link>
-              </li>
-              <li>
-                <Link href="/legal">Legal</Link>
-              </li>
-              <li>
-                <Link href="/car-import">Car Import</Link>
-              </li>
-            </ul>
+
+          {/* Links Sections */}
+          <div className="md:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-12 p-12 lg:p-16 bg-black">
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-sm font-semibold text-gray-400 mb-6 flex items-center gap-2">
+                QUICK LINKS
+                <span className="h-px w-8 bg-gray-700"></span>
+              </h4>
+              <ul className="space-y-4">
+                {["Home", "About", "Services", "Blog"].map((item) => (
+                  <li key={item}>
+                    <Link
+                      href={`/${item.toLowerCase()}`}
+                      className="text-gray-300 hover:text-white transition-colors inline-flex items-center gap-2 group"
+                    >
+                      <span className="h-px w-4 bg-gray-700 group-hover:w-6 group-hover:bg-blue-400 transition-all"></span>
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Services */}
+            <div>
+              <h4 className="text-sm font-semibold text-gray-400 mb-6 flex items-center gap-2">
+                SERVICES
+                <span className="h-px w-8 bg-gray-700"></span>
+              </h4>
+              <ul className="space-y-4">
+                {["Freight", "Cargo", "Legal", "Car Import"].map((item) => (
+                  <li key={item}>
+                    <Link
+                      href={`/${item.toLowerCase().replace(" ", "-")}`}
+                      className="text-gray-300 hover:text-white transition-colors inline-flex items-center gap-2 group"
+                    >
+                      <span className="h-px w-4 bg-gray-700 group-hover:w-6 group-hover:bg-blue-400 transition-all"></span>
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Legal */}
+            <div>
+              <h4 className="text-sm font-semibold text-gray-400 mb-6 flex items-center gap-2">
+                LEGAL
+                <span className="h-px w-8 bg-gray-700"></span>
+              </h4>
+              <ul className="space-y-4">
+                {[
+                  "Terms & Conditions",
+                  "Privacy Policy",
+                  "Site Map",
+                  "Cookies",
+                ].map((item) => (
+                  <li key={item}>
+                    <Link
+                      href={`/${item.toLowerCase().replace(/[&\s]/g, "-")}`}
+                      className="text-gray-300 hover:text-white transition-colors inline-flex items-center gap-2 group"
+                    >
+                      <span className="h-px w-4 bg-gray-700 group-hover:w-6 group-hover:bg-blue-400 transition-all"></span>
+                      {item}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
 
-        {/* Site Links */}
-        <div className="p-20">
-          <h4 className="uppercase font-semibold mb-4">Site /</h4>
-          <ul className="space-y-2">
-            <li>
-              <Link href="/terms-and-conditions">Terms & Conditions</Link>
-            </li>
-            <li>
-              <Link href="/privacy-policy">Privacy Policy</Link>
-            </li>
-            <li>
-              <Link href="/site-map">Map</Link>
-            </li>
-            <li>
-              <Link href="/cookies">Cookies</Link>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Footer Bottom */}
-      <div className="mt-12 border-t border-gray-600 pt-8 flex justify-between items-center">
-        <div className="w-full flex flex-row justify-between align-middle ">
-          <img src="/logo.png" alt="Jope Logo" className="w-33 h-32 -mt-8" />
-          <p className="pr-10">
-            Copyright Jope Forwarders Uganda Limited 2024 | All rights reserved
-          </p>
+        {/* Footer Bottom */}
+        <div className="border-t border-gray-800">
+          <div className="p-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <img src="/logo.png" alt="Jope Logo" className="h-16 w-auto" />
+            <p className="text-gray-400 text-sm text-center md:text-right">
+              © {new Date().getFullYear()} Jope Forwarders Uganda Limited. All
+              rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </footer>

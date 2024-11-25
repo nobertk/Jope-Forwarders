@@ -11,6 +11,7 @@ import Image from "next/image";
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [heroHeight, setHeroHeight] = useState(0);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     // Get hero section height
@@ -47,36 +48,77 @@ const Navbar = () => {
         <Image
           src={Logo}
           alt="Jope Forwarders"
-          className="h-20 w-auto object-contain"
+          className="h-12 w-auto object-contain sm:h-20"
           priority
         />
       </Link>
 
+      {/* Hamburger Menu Icon */}
+      <button
+        className="text-white sm:hidden"
+        onClick={() => setMenuOpen((prev) => !prev)}
+      >
+        <svg
+          className="h-8 w-8"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d={menuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+          />
+        </svg>
+      </button>
+
       {/* Navigation Links */}
-      <div className="navlinks">
-        <ul className="flex flex-row gap-6 text-white">
+      <div
+        className={`navlinks fixed top-0 left-0 h-screen w-full bg-black/80 z-40 flex flex-col items-center justify-center gap-6 text-white transition-transform transform ${
+          menuOpen ? "translate-x-0" : "-translate-x-full"
+        } sm:static sm:translate-x-0 sm:flex sm:flex-row sm:gap-6 sm:bg-transparent sm:h-auto sm:w-auto`}
+      >
+        <ul className="flex flex-col sm:flex-row gap-6">
           <li className="hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-            <Link href="/" className="block">
+            <Link href="/" className="block" onClick={() => setMenuOpen(false)}>
               Home
             </Link>
           </li>
           <li className="hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-            <Link href="/about" className="block">
+            <Link
+              href="/about"
+              className="block"
+              onClick={() => setMenuOpen(false)}
+            >
               About Us
             </Link>
           </li>
           <li className="hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-            <Link href="/services" className="block">
+            <Link
+              href="/services"
+              className="block"
+              onClick={() => setMenuOpen(false)}
+            >
               Services
             </Link>
           </li>
           <li className="hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-            <Link href="/faqs" className="block">
+            <Link
+              href="/faqs"
+              className="block"
+              onClick={() => setMenuOpen(false)}
+            >
               FAQs
             </Link>
           </li>
           <li className="hover:text-orange-500 transition-colors duration-300 cursor-pointer">
-            <Link href="/contact" className="block">
+            <Link
+              href="/contact"
+              className="block"
+              onClick={() => setMenuOpen(false)}
+            >
               Contact Us
             </Link>
           </li>
@@ -84,7 +126,7 @@ const Navbar = () => {
       </div>
 
       {/* Get Quote Button */}
-      <div className="get_quote_btn">
+      <div className="get_quote_btn hidden sm:block">
         <Link href="/quote">
           <CustomButton
             fontcolor={COLORS.WHITE_SMOKE}
