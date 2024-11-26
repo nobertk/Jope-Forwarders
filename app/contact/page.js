@@ -29,10 +29,10 @@ const ContactPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[500px] w-full">
+      <div className="relative h-[70vh] w-full">
         <div className="absolute inset-0">
           <Image
-            src="/global-shipping-network.jpg"
+            src="/logistics.jpg"
             alt="Global Shipping Network"
             layout="fill"
             objectFit="cover"
@@ -127,7 +127,7 @@ const ContactPage = () => {
                   <Phone className="text-3xl" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <p>+254 (0) 123 456 789</p>
+                    <p>+256 (0) 123 456 789</p>
                     <p>+254 (0) 987 654 321</p>
                   </div>
                 </div>
@@ -135,8 +135,7 @@ const ContactPage = () => {
                   <Email className="text-3xl" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p>info@logisticscompany.com</p>
-                    <p>support@logisticscompany.com</p>
+                    <p>info@jopeforwarders.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -169,9 +168,11 @@ const ContactPage = () => {
             Brands & Companies <br /> we worked with
           </p>
           <p className="text-lg font-semibold">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            <br /> nonummy nibh euismod tincidunt ut laoreet dolore magna
-            aliquam
+            Our partnerships drive success through collaboration and shared
+            goals.
+            <br />
+            Together, we create seamless solutions that benefit all parties
+            involv
           </p>
         </div>
         {/* Partners */}

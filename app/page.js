@@ -8,6 +8,7 @@ import {
 } from "@mui/icons-material";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HomePage = () => {
@@ -34,17 +35,24 @@ const HomePage = () => {
           </h1>
 
           <p className="text-sm md:text-base lg:text-lg max-w-xl mb-8 opacity-90">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+            We enable business growth and client harmony with unparalled
+            services and delivery providing trustworthy, efficient and quality
+            logistics services to our clients.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-[#FF6B00] hover:bg-[#e65100] text-white px-8 py-3 rounded-md text-sm md:text-base font-medium transition-colors">
+            <Link
+              href="/quote"
+              className="bg-[#FF6B00] hover:bg-[#e65100] text-white px-8 py-3 rounded-full text-sm md:text-base font-medium transition-colors"
+            >
               GET A QUOTE
-            </button>
-            <button className="border border-white text-white px-8 py-3 rounded-md text-sm md:text-base font-medium hover:bg-white/10 transition-colors">
+            </Link>
+            <Link
+              href="/services"
+              className="border border-white text-white px-8 py-3 rounded-full text-sm md:text-base font-medium hover:bg-white/10 transition-colors"
+            >
               OUR SERVICES
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -103,7 +111,7 @@ const HomePage = () => {
           />
 
           {/* Card Container - Positioned Absolute */}
-          <div className="absolute bottom-2 left-0 w-[600px] bg-white p-12 md:p-16">
+          <div className="absolute bottom-2 left-0 w-[600px] bg-white opacity-90 p-12 md:p-16">
             <p className="text-blue-700 font-bold text-xl mb-4">ABOUT US/</p>
 
             <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -113,12 +121,21 @@ const HomePage = () => {
             </h2>
 
             <p className="text-gray-600 mb-8">
-              Lorem ipsum dolor sit amet, consectetuer adipisc-
+              Established in 1994, Jope Forwarders Uganda is a trusted leader in
+              customs clearing and forwarding.
               <br />
-              ing elit, sed diam nonummy nibh euis
+              <br />
+              We are committed to delivering reliable, efficient, and
+              high-quality logistics services tailored to meet our Clients'
+              needs. With a strong reputation for integrity, reliability, and
+              customer satisfaction, we provide measurable solutions for the
+              clearance of import and export consignments by sea, air, and road.
             </p>
 
-            <button className="flex items-center gap-2 font-bold text-black hover:text-[#0066FF] transition-colors">
+            <Link
+              className="flex items-center gap-2 font-bold text-black hover:text-[#0066FF] transition-colors"
+              href="/about"
+            >
               LEARN MORE
               <svg
                 className="w-4 h-4"
@@ -129,7 +146,7 @@ const HomePage = () => {
               >
                 <path d="M5 12h14m-7-7l7 7-7 7" />
               </svg>
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -162,10 +179,11 @@ const HomePage = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt.
+                  We specialize in moving goods locally an internationally,
+                  handling documentation, coordinating with shippers, and
+                  managing customs inquiries.
                 </p>
-                <a href="#" className="text-blue-500 font-medium">
+                <a href="/services" className="text-blue-500 font-medium">
                   Learn more →
                 </a>
               </div>
@@ -178,10 +196,12 @@ const HomePage = () => {
                   </h3>
                 </div>
                 <p className="mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt.
+                  Our freight service consolidates small shipments into one
+                  truckload to the same destination, reducing costs, improving
+                  transit times, lowering emissions, and ensuring safer,
+                  reliable deliveries.
                 </p>
-                <a href="#" className="text-white font-medium">
+                <a href="/services" className="text-white font-medium">
                   Learn more →
                 </a>
               </div>
@@ -197,10 +217,11 @@ const HomePage = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt.
+                  We specialize in vehicle importation, handling customs
+                  clearance, documentation, and transportation, ensuring
+                  regulatory compliance and timely delivery.
                 </p>
-                <a href="#" className="text-blue-500 font-medium">
+                <a href="/services" className="text-blue-500 font-medium">
                   Learn more →
                 </a>
               </div>
@@ -216,10 +237,10 @@ const HomePage = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt.
+                  We provide comprehensive logistics solutions, offering
+                  door-to-door delivery from pickup to final destination.
                 </p>
-                <a href="#" className="text-blue-500 font-medium">
+                <a href="/services" className="text-blue-500 font-medium">
                   Learn more →
                 </a>
               </div>
@@ -235,10 +256,10 @@ const HomePage = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt.
+                  Our experienced team handles documentation and customs
+                  procedures, ensuring smooth clearance.
                 </p>
-                <a href="#" className="text-blue-500 font-medium">
+                <a href="/services" className="text-blue-500 font-medium">
                   Learn more →
                 </a>
               </div>
@@ -254,10 +275,10 @@ const HomePage = () => {
                   </h3>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  diam nonummy nibh euismod tincidunt.
+                  We manage logistics by assessing suppliers and streamlining
+                  the acquisition, storage, and transportation of resources.
                 </p>
-                <a href="#" className="text-blue-500 font-medium">
+                <a href="/services" className="text-blue-500 font-medium">
                   Learn more →
                 </a>
               </div>
@@ -275,17 +296,24 @@ const HomePage = () => {
 
             <p className="text-white text-lg text-wrap  mb-10">
               {" "}
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, <br />{" "}
-              sed diam nonummy nibh euismod tincidunt ut laoreet{" "}
+              We optimize costs, ensure safe transport, streamline supply
+              chains, and <br /> simplify customs, providing tailored support
+              for all your logistics needs{" "}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-[#FF6B00] hover:bg-[#e65100] text-white px-8 py-3  text-sm md:text-base font-medium transition-colors rounded-full">
+              <Link
+                href="/quote"
+                className="bg-[#FF6B00] hover:bg-[#e65100] text-white px-8 py-3  text-sm md:text-base font-medium transition-colors rounded-full"
+              >
                 GET A QUOTE
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-full text-sm md:text-base font-medium hover:bg-white/10 transition-colors">
+              </Link>
+              <Link
+                href="/services"
+                className="border border-white text-white px-8 py-3 rounded-full text-sm md:text-base font-medium hover:bg-white/10 transition-colors"
+              >
                 OUR SERVICES
-              </button>
+              </Link>
             </div>
           </div>
           <div className="flex justify-end align-top mb-40 -mt-20 ">
@@ -309,9 +337,11 @@ const HomePage = () => {
           </p>
           <p className="text-lg font-semibold">
             {" "}
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            <br /> nonummy nibh euismod tincidunt ut laoreet dolore magna
-            aliquam
+            Our partnerships drive success through collaboration and shared
+            goals.
+            <br />
+            Together, we create seamless solutions that benefit all parties
+            involved.
           </p>
         </div>
         {/* Partners */}

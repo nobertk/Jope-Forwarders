@@ -40,7 +40,7 @@ const FAQPage = () => {
         {
           question: "How long does international shipping take?",
           answer:
-            "Shipping times vary depending on the mode of transport: sea freight can take 20-40 days, air freight 3-10 days, and express shipping 1-3 days.",
+            "Shipping times vary depending on the mode of transport: sea freight can take 720-40 days, air freight 3-10 days, and express shipping 1-7 days.",
         },
         {
           question:
@@ -85,10 +85,10 @@ const FAQPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <div className="relative h-[500px] w-full">
+      <div className="relative h-[70vh] w-full">
         <div className="absolute inset-0">
           <Image
-            src="/cargo-shipping-containers.jpg"
+            src="/marks.jpg"
             alt="Shipping Containers"
             layout="fill"
             objectFit="cover"
@@ -179,9 +179,11 @@ const FAQPage = () => {
             Brands & Companies <br /> we worked with
           </p>
           <p className="text-lg font-semibold">
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-            <br /> nonummy nibh euismod tincidunt ut laoreet dolore magna
-            aliquam
+            Our partnerships drive success through collaboration and shared
+            goals.
+            <br />
+            Together, we create seamless solutions that benefit all parties
+            involv
           </p>
         </div>
         {/* Partners */}

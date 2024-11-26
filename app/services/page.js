@@ -7,6 +7,7 @@ import {
   AirportShuttle,
   Inventory,
   DeliveryDining,
+  CarRepair,
 } from "@mui/icons-material";
 
 const ServiceDetailCard = ({ icon: Icon, title, description, details }) => (
@@ -32,15 +33,15 @@ const ServiceDetailCard = ({ icon: Icon, title, description, details }) => (
 const ServicesPage = () => {
   const serviceDetails = [
     {
-      icon: LocalShipping,
-      title: "Road Freight",
+      icon: CarRepair,
+      title: "Vehicle Importation",
       description:
-        "Efficient ground transportation solutions tailored to your business needs.",
+        "Streamlined vehicle importation services tailored to your needs.",
       details: [
-        "Full and partial truck load services",
-        "Cross-country and regional transportation",
-        "Real-time tracking and monitoring",
-        "Temperature-controlled shipping",
+        "Customs clearance and documentation handling",
+        "Safe and timely vehicle delivery",
+        "Cross-border importation services",
+        "End-to-end transportation from port to destination",
       ],
     },
     {
@@ -155,7 +156,7 @@ const ServicesPage = () => {
             Contact our experts to develop a tailored logistics strategy that
             drives your business forward.
           </p>
-          <button className="bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors">
+          <button className="bg-[#FF6B00] text-white px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors">
             Get a Consultation
           </button>
         </div>
