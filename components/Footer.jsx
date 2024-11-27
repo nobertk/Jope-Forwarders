@@ -1,10 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight, Mail } from "@mui/icons-material";
+import { Montserrat } from "next/font/google";
+
+const montserrat = Montserrat({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white">
+    <footer className={`bg-black text-white ${montserrat.className}`}>
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-0">
           {/* Subscribe Section with grey background */}
@@ -48,7 +54,7 @@ export default function Footer() {
                 <span className="h-px w-8 bg-gray-700"></span>
               </h4>
               <ul className="space-y-4">
-                {["Home", "About", "Services", "Blog"].map((item) => (
+                {["Home", "About", "Services", "Contact"].map((item) => (
                   <li key={item}>
                     <Link
                       href={`/${item.toLowerCase()}`}

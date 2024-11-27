@@ -7,6 +7,18 @@ import {
   QuestionMark,
   InfoOutlined,
 } from "@mui/icons-material";
+import { Montserrat, Raleway } from "next/font/google";
+import Link from "next/link";
+// Import Google Fonts
+const montserrat = Montserrat({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
+
+const raleway = Raleway({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 const FAQPage = () => {
   const [openSection, setOpenSection] = useState(null);
@@ -83,7 +95,7 @@ const FAQPage = () => {
   };
 
   return (
-    <div>
+    <div className={`${montserrat.className}`}>
       {/* Hero Section */}
       <div className="relative h-[70vh] w-full">
         <div className="absolute inset-0">
@@ -99,7 +111,9 @@ const FAQPage = () => {
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 h-full container mx-auto px-4 md:px-6 flex flex-col justify-center items-center text-center text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+          <h1
+            className={` ${raleway.className}text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight`}
+          >
             Frequently Asked Questions
           </h1>
           <p className="text-sm md:text-base lg:text-lg max-w-xl mb-8 opacity-90">
@@ -162,9 +176,12 @@ const FAQPage = () => {
             <p className="text-gray-600 mb-6">
               Our experts are ready to help you with personalized support.
             </p>
-            <button className="bg-[#FF6B00] hover:bg-[#e65100] text-white px-8 py-3 rounded-full text-base font-medium transition-colors">
+            <Link
+              href="/contact"
+              className="bg-[#FF6B00] hover:bg-[#e65100] text-white px-8 py-3 rounded-full text-base font-medium transition-colors"
+            >
               Contact Our Team
-            </button>
+            </Link>
           </div>
         </div>
       </div>
@@ -178,7 +195,7 @@ const FAQPage = () => {
           <p className="text-4xl font-bold">
             Brands & Companies <br /> we worked with
           </p>
-          <p className="text-lg font-semibold">
+          <p className="text-lg text-gray-500 font-semibold">
             Our partnerships drive success through collaboration and shared
             goals.
             <br />

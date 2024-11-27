@@ -1,6 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Montserrat, Raleway } from "next/font/google";
+
+// Import fonts
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
+const raleway = Raleway({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 const TeamMemberCard = ({ name, role, image }) => (
   <div className="bg-white rounded-xl overflow-hidden shadow-md">
@@ -14,15 +22,19 @@ const TeamMemberCard = ({ name, role, image }) => (
       />
     </div>
     <div className="p-4 text-center">
-      <h3 className="text-xl font-semibold text-gray-900">{name}</h3>
-      <p className="text-gray-600">{role}</p>
+      <h3
+        className={`text-xl font-semibold text-gray-900 ${raleway.className}`}
+      >
+        {name}
+      </h3>
+      <p className={`text-gray-600 ${montserrat.className}`}>{role}</p>
     </div>
   </div>
 );
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className={`min-h-screen bg-gray-50 ${montserrat.className}`}>
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -36,7 +48,9 @@ const AboutPage = () => {
         </div>
 
         <div className="relative z-10 text-center container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">
+          <h1
+            className={`text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-lg ${raleway.className}`}
+          >
             Global Transport Solutions
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10">
@@ -56,16 +70,20 @@ const AboutPage = () => {
       <section className="container mx-auto p-40 bg-white">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2
+              className={`text-4xl font-bold text-gray-900 mb-6 ${raleway.className}`}
+            >
               Our Journey: From Local Roots to Global Reach
             </h2>
-            <div className="text-gray-600 space-y-4 leading-relaxed">
+            <div
+              className={`text-gray-600 space-y-4 leading-relaxed ${montserrat.className}`}
+            >
               <p>
                 Established in 1994, Jope Forwarders Uganda is a trusted leader
                 in customs clearing and forwarding.
               </p>
               <p>
-                We are commited to delivering reliable, efficient, and
+                We are committed to delivering reliable, efficient, and
                 high-quality logistics services tailored to meet our clients'
                 needs. With a strong reputation for integrity, reliability, and
                 customer satisfaction, we provide measurable solutions for the
@@ -95,10 +113,14 @@ const AboutPage = () => {
       <section className="bg-gray-100 p-40">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2
+              className={`text-4xl font-bold text-gray-900 mb-4 ${raleway.className}`}
+            >
               Our Purpose and Principles
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p
+              className={`text-gray-600 max-w-2xl mx-auto ${montserrat.className}`}
+            >
               We are driven by a commitment to excellence, sustainability, and
               global connectivity.
             </p>
@@ -107,8 +129,12 @@ const AboutPage = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Mission */}
             <div className="bg-white p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">Mission</h3>
-              <p className="text-gray-600">
+              <h3
+                className={`text-2xl font-bold text-blue-600 mb-4 ${raleway.className}`}
+              >
+                Mission
+              </h3>
+              <p className={`text-gray-600 ${montserrat.className}`}>
                 To provide innovative, efficient, and sustainable transportation
                 solutions that empower businesses to connect, grow, and thrive
                 in a global marketplace.
@@ -117,8 +143,12 @@ const AboutPage = () => {
 
             {/* Vision */}
             <div className="bg-white p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">Vision</h3>
-              <p className="text-gray-600">
+              <h3
+                className={`text-2xl font-bold text-blue-600 mb-4 ${raleway.className}`}
+              >
+                Vision
+              </h3>
+              <p className={`text-gray-600 ${montserrat.className}`}>
                 To be the world's most trusted and technologically advanced
                 logistics partner, setting new standards in transportation
                 efficiency, customer satisfaction, and environmental
@@ -128,10 +158,12 @@ const AboutPage = () => {
 
             {/* Values */}
             <div className="bg-white p-8 rounded-xl shadow-md">
-              <h3 className="text-2xl font-bold text-blue-600 mb-4">
+              <h3
+                className={`text-2xl font-bold text-blue-600 mb-4 ${raleway.className}`}
+              >
                 Our Values
               </h3>
-              <ul className="text-gray-600 space-y-2">
+              <ul className={`text-gray-600 space-y-2 ${montserrat.className}`}>
                 <li className="flex items-center">
                   <span className="mr-2 text-[#FF6B00]">●</span>
                   Integrity in Every Transaction
@@ -154,13 +186,11 @@ const AboutPage = () => {
                 </li>
               </ul>
             </div>
+
+            {/* Our Team Section */}
           </div>
         </div>
       </section>
-
-      {/* Existing Sections from Original Design */}
-      {/* (Keep the existing Services Overview and Our Team sections) */}
-      {/* Services Overview Section */}
       <section className="container mx-auto py-40">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="relative">
@@ -173,7 +203,9 @@ const AboutPage = () => {
             />
           </div>
           <div>
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2
+              className={`text-4xl font-bold text-gray-900 mb-6 ${raleway.className}`}
+            >
               Benefits of Choosing Jope Forwarders.
             </h2>
             <div className="space-y-6">
@@ -219,7 +251,9 @@ const AboutPage = () => {
       <section className="bg-gray-100 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2
+              className={`text-4xl font-bold text-gray-900 mb-4 ${raleway.className}`}
+            >
               Meet Our Leadership Team
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">

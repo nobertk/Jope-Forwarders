@@ -7,6 +7,13 @@ import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import Logo from "../public/logo.png";
 import Link from "next/link";
 import Image from "next/image";
+import { Montserrat } from "next/font/google";
+
+// Import Google Fonts
+const montserrat = Montserrat({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,6 +48,9 @@ const Navbar = () => {
           ? "fixed top-0 bg-black/80 backdrop-blur-sm"
           : "absolute top-0 bg-transparent"
       }
+
+      
+   
     `}
     >
       {/* Logo Section */}
@@ -80,7 +90,9 @@ const Navbar = () => {
           menuOpen ? "translate-x-0" : "-translate-x-full"
         } sm:static sm:translate-x-0 sm:flex sm:flex-row sm:gap-6 sm:bg-transparent sm:h-auto sm:w-auto`}
       >
-        <ul className="flex flex-col sm:flex-row gap-6">
+        <ul
+          className={`flex flex-col sm:flex-row gap-6 ${montserrat.className}`}
+        >
           <li className="hover:text-orange-500 transition-colors duration-300 cursor-pointer">
             <Link href="/" className="block" onClick={() => setMenuOpen(false)}>
               Home
@@ -143,6 +155,7 @@ const Navbar = () => {
                 alignItems: "center",
                 gap: "0.5rem",
               }}
+              className={`${montserrat.className}`}
             >
               Get Quote <ArrowRightAltIcon size={18} />
             </Typography>
