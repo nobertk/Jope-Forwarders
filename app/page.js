@@ -10,10 +10,22 @@ import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { Montserrat, Raleway } from "next/font/google";
+import { Skeleton } from "@mui/material";
 
+// Import Google Fonts
+const montserrat = Montserrat({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
+
+const raleway = Raleway({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 const HomePage = () => {
   return (
-    <div className="relative">
+    <div className={`relative ${montserrat.className}`}>
       {/* Hero Section */}
       <div className="relative h-screen w-full">
         {/* Background Image */}
@@ -29,12 +41,16 @@ const HomePage = () => {
 
         {/* Content */}
         <div className="relative z-10 h-full container mx-auto px-4 md:px-6 flex flex-col justify-center items-center text-center text-white">
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+          <h1
+            className={`text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight ${raleway.className}`}
+          >
             Customs Clearing &<br />
             Forwarding Agent
           </h1>
 
-          <p className="text-sm md:text-base lg:text-lg max-w-xl mb-8 opacity-90">
+          <p
+            className={`text-sm md:text-base lg:text-lg max-w-xl mb-8 opacity-90`}
+          >
             We enable business growth and client harmony with unparalled
             services and delivery providing trustworthy, efficient and quality
             logistics services to our clients.
@@ -43,13 +59,13 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="/quote"
-              className="bg-[#FF6B00] hover:bg-[#e65100] text-white px-8 py-3 rounded-full text-sm md:text-base font-medium transition-colors"
+              className={`bg-[#FF6B00] hover:bg-[#e65100] text-white px-8 py-3 rounded-full text-sm md:text-base font-medium transition-colors  `}
             >
               GET A QUOTE
             </Link>
             <Link
               href="/services"
-              className="border border-white text-white px-8 py-3 rounded-full text-sm md:text-base font-medium hover:bg-white/10 transition-colors"
+              className={`border border-white text-white px-8 py-3 rounded-full text-sm md:text-base font-medium hover:bg-white/10 transition-colors  `}
             >
               OUR SERVICES
             </Link>
@@ -63,7 +79,9 @@ const HomePage = () => {
           <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-32">
             {/* Title */}
             <div className="lg:w-1/4">
-              <h2 className="text-4xl md:text-5xl font-bold leading-tight">
+              <h2
+                className={`text-4xl md:text-5xl font-bold leading-tight  ${raleway.className}`}
+              >
                 Our impact on
                 <br />
                 East Africa.
@@ -112,9 +130,15 @@ const HomePage = () => {
 
           {/* Card Container - Positioned Absolute */}
           <div className="absolute bottom-2 left-0 w-[600px] bg-white opacity-90 p-12 md:p-16">
-            <p className="text-blue-700 font-bold text-xl mb-4">ABOUT US/</p>
+            <p
+              className={`text-blue-700 font-bold text-xl mb-4 ${raleway.className}`}
+            >
+              ABOUT US/
+            </p>
 
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+            <h2
+              className={`text-4xl md:text-5xl font-bold mb-6 leading-tight ${raleway.className}`}
+            >
               We're the future of
               <br />
               Logistics Technology.
@@ -155,7 +179,9 @@ const HomePage = () => {
         {/* Strength and Advantages Header */}
         <div className="w-full flex justify-center pt-20 pb-10">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-800">
+            <h1
+              className={`text-4xl font-bold text-gray-800 ${raleway.className}`}
+            >
               OUR COMPREHENSIVE SET OF SERVICES
             </h1>
             <p className="italic text-lg font-semibold text-gray-600 mt-2">
@@ -289,7 +315,9 @@ const HomePage = () => {
         {/* CALL TO ACTION */}
         <div className="flex relative justify-between bg-blue-700  align-middle w-full">
           <div className="flex flex-col p-40 ">
-            <h2 className="font-bold text-white text-4xl text-left mb-10">
+            <h2
+              className={`font-bold text-white text-4xl text-left mb-10 ${raleway.className}`}
+            >
               Ready to pull a trigger? <br />
               Get a quote today.
             </h2>
@@ -297,8 +325,8 @@ const HomePage = () => {
             <p className="text-white text-lg text-wrap  mb-10">
               {" "}
               We optimize costs, ensure safe transport, streamline supply
-              chains, and <br /> simplify customs, providing tailored support
-              for all your logistics needs{" "}
+              chains, and simplify customs, providing tailored support for all
+              your logistics needs{" "}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
@@ -332,10 +360,10 @@ const HomePage = () => {
           <p className="font-bold text-xl ">OUR PARTNERS /</p>
         </div>
         <div className="flex justify-between mt-10">
-          <p className="text-4xl font-bold">
+          <p className={`text-4xl font-bold ${raleway.className}`}>
             Brands & Companies <br /> we worked with
           </p>
-          <p className="text-lg font-semibold">
+          <p className="text-lg text-gray-500 font-semibold">
             {" "}
             Our partnerships drive success through collaboration and shared
             goals.

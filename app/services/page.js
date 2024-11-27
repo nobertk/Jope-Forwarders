@@ -9,6 +9,16 @@ import {
   DeliveryDining,
   CarRepair,
 } from "@mui/icons-material";
+import { Montserrat, Raleway } from "next/font/google";
+
+const montserrat = Montserrat({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
+const raleway = Raleway({
+  weight: ["400", "500", "600"],
+  subsets: ["latin"],
+});
 
 const ServiceDetailCard = ({ icon: Icon, title, description, details }) => (
   <div className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-all group">
@@ -107,7 +117,7 @@ const ServicesPage = () => {
   ];
 
   return (
-    <div className="bg-gray-50">
+    <div className={`"bg-gray-50 ${montserrat.className}`}>
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -121,7 +131,9 @@ const ServicesPage = () => {
         </div>
 
         <div className="relative z-10 text-center container mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-lg">
+          <h1
+            className={`${raleway.className}text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight drop-shadow-lg`}
+          >
             Our Comprehensive Services
           </h1>
           <p className="text-xl text-white/90 max-w-2xl mx-auto mb-10">
@@ -149,7 +161,7 @@ const ServicesPage = () => {
       {/* Call to Action */}
       <section className="bg-blue-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">
+          <h2 className={`text-4xl font-bold mb-6 ${raleway.className}`}>
             Ready to Optimize Your Logistics?
           </h2>
           <p className="text-xl mb-10 max-w-2xl mx-auto">
