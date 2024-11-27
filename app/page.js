@@ -346,7 +346,7 @@ const HomePage = () => {
           </div>
           <div className="flex justify-end align-top mb-40 -mt-20 ">
             <Image
-              src="/container3.jpg"
+              src="/transport-logistics-concept.jpg"
               width={1000}
               height={500}
               objectFit="cover"
