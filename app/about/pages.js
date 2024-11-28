@@ -59,7 +59,7 @@ const AboutPage = () => {
           </p>
           <Link
             href="/services"
-            className="bg-[#FF6B00] text-white px-8 py-3 rounded-full hover:bg-blue-700 transition-colors"
+            className="bg-[#FF6B00] text-white px-8 py-3 rounded-full hover:bg-[#ff6a00ca] transition-colors"
           >
             Explore Services
           </Link>
