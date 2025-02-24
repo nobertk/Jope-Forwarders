@@ -139,7 +139,7 @@ const Navbar = () => {
 
       {/* Get Quote Button */}
       <div className="get_quote_btn hidden sm:block">
-        <Link href="/quote">
+        <Link href="/contact">
           <CustomButton
             fontcolor={COLORS.WHITE_SMOKE}
             background={COLORS.ORANGE}
