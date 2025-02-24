@@ -265,7 +265,7 @@ const AboutPage = () => {
             <TeamMemberCard
               name="Aine Joram Jones"
               role="Chief Executive Officer"
-              image="/joram.jpg"
+              image="/Joram.jpg"
             />
             <TeamMemberCard
               name="Kyagaba John"
@@ -280,7 +280,7 @@ const AboutPage = () => {
             <TeamMemberCard
               name="Kimuli Stephen Goodwill"
               role="Law & Legal"
-              image="/Kimuli.jpg"
+              image="/kimuli.jpg"
             />
           </div>
         </div>
